@@ -1,0 +1,1303 @@
+/* =========================================================
+   BridgeSCAP-BIM: Estilos Visuales e Identidad Institucional
+   Universidad Nacional de Piura (UNP) - Fac. de Ing. Civil (FIC)
+   Tesis: Br. Christian Ivan Vilchez Tume
+   ========================================================= */
+
+:root {
+  /* Paleta Institucional UNP & FIC */
+  --unp-blue: #0f3b7a;        /* Azul real UNP */
+  --unp-light-blue: #1e5cb3;
+  --fic-brick: #8b1e1e;       /* Rojo granate/ladrillo FIC */
+  --fic-hover: #a52828;
+  --accent: #0284c7;          /* Azul cielo técnico */
+  
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --border-color: #cbd5e1;
+  --border-sheet: #000000;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  
+  /* Semáforo SCAP */
+  --scap-green: #10b981;
+  --scap-blue: #2563eb;
+  --scap-yellow: #f59e0b;
+  --scap-red: #ef4444;
+  --scap-darkred: #881337;
+  --scap-gray: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+/* =========================================================
+   ENCABEZADO INSTITUCIONAL CON LOGOS OFICIALES
+   ========================================================= */
+.app-header {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border-bottom: 2px solid #cbd5e1;
+  padding: 12px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.institutional-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.header-logo {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.header-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-divider {
+  width: 1.5px;
+  height: 42px;
+  background: #cbd5e1;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.academic-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: var(--fic-brick);
+  text-transform: uppercase;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--unp-blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.2;
+}
+
+.badge-version {
+  font-size: 0.72rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-weight: 700;
+  border: 1px solid #bae6fd;
+}
+
+.brand-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ENCABEZADO DERECHA: AUTOR, ASESOR Y KPI */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.author-info-box {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 6px 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.author-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-tag {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.author-name {
+  font-size: 0.88rem;
+  color: var(--unp-blue);
+}
+
+.advisors-line {
+  font-size: 0.72rem;
+  color: #475569;
+  border-top: 1px dashed #e2e8f0;
+  margin-top: 4px;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot-separator {
+  color: #cbd5e1;
+}
+
+.global-kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.kpi-score-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 3px solid var(--scap-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #166534;
+}
+
+.kpi-text-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.status-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--scap-green);
+}
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+   ========================================================= */
+.nav-tabs {
+  background: #ffffff;
+  display: flex;
+  gap: 6px;
+  padding: 0 28px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 14px 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--unp-blue);
+  background: #f8fafc;
+}
+
+.tab-btn.active {
+  color: var(--unp-blue);
+  border-bottom-color: var(--unp-blue);
+  background: #eff6ff;
+  font-weight: 700;
+}
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL Y TARJETAS
+   ========================================================= */
+.main-container {
+  max-width: 1300px;
+  margin: 22px auto;
+  padding: 0 24px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+
+.elevation-card {
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+}
+
+.card-header {
+  padding: 16px 22px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h2, .card-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--unp-blue);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-body {
+  padding: 22px;
+}
+
+.text-muted {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.text-accent { color: var(--accent); }
+.text-green { color: var(--scap-green); }
+.text-blue { color: var(--scap-blue); }
+.text-yellow { color: var(--scap-yellow); }
+.text-red { color: var(--scap-red); }
+.text-darkred { color: var(--scap-darkred); }
+
+/* =========================================================
+   ESQUEMA 2.5D INTERACTIVO
+   ========================================================= */
+.bridge-canvas-container {
+  padding: 22px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.bridge-svg {
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.bridge-part {
+  cursor: pointer;
+  transition: all 0.22s ease;
+  fill: #64748b;
+}
+
+.bridge-part:hover {
+  filter: brightness(1.2) drop-shadow(0 0 8px rgba(37,99,235,0.7));
+  stroke: #ffffff;
+  stroke-width: 1.8;
+}
+
+.legend-bar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.dot-green { background-color: var(--scap-green); }
+.dot-blue { background-color: var(--scap-blue); }
+.dot-yellow { background-color: var(--scap-yellow); }
+.dot-red { background-color: var(--scap-red); }
+.dot-darkred { background-color: var(--scap-darkred); }
+.dot-gray { background-color: var(--scap-gray); }
+
+/* GRILLA DE ELEMENTOS ESTRUCTURALES */
+.components-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 22px;
+}
+
+.group-column {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.group-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.group-title.superestructura { border-color: var(--unp-blue); color: var(--unp-blue); }
+.group-title.subestructura { border-color: var(--fic-brick); color: var(--fic-brick); }
+.group-title.complementarios { border-color: var(--accent); color: var(--accent); }
+
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comp-card-item {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 9px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.comp-card-item:hover {
+  border-color: var(--unp-blue);
+  background: #eff6ff;
+  transform: translateX(3px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.comp-item-info strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.comp-item-info span {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.comp-status-badge {
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   BARRA DE HERRAMIENTAS DE LA FICHA
+   ========================================================= */
+.ficha-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 22px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-select {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--unp-blue);
+  background-color: #fff;
+  min-width: 340px;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary { background: var(--unp-blue); color: #fff; }
+.btn-primary:hover { background: var(--unp-light-blue); transform: translateY(-1px); }
+.btn-success { background: #059669; color: #fff; }
+.btn-success:hover { background: #047857; transform: translateY(-1px); }
+.btn-secondary { background: #64748b; color: #fff; }
+.btn-secondary:hover { background: #475569; }
+.btn-outline { background: transparent; border: 1.5px solid #cbd5e1; color: var(--text-main); }
+.btn-outline:hover { background: #f1f5f9; border-color: var(--unp-blue); }
+.btn-sm { padding: 4px 10px; font-size: 0.78rem; }
+
+/* =========================================================
+   FORMATO OFICIAL DE LA FICHA IMPRIMIBLE (FIGURA 5.18 DE TESIS)
+   ========================================================= */
+.official-sheet-wrapper {
+  background: #94a3b8;
+  padding: 24px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.official-sheet {
+  background: #ffffff;
+  width: 100%;
+  max-width: 820px; /* Ancho estándar A4 */
+  padding: 18px 22px;
+  border: 2px solid var(--border-sheet);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  font-size: 0.8rem;
+  color: #000;
+}
+
+/* ENCABEZADO CON LOGOS UNP Y FIC */
+.sheet-title-banner {
+  border: 1.5px solid var(--border-sheet);
+  display: grid;
+  grid-template-columns: 80px 1fr 80px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4px;
+  background: #ffffff;
+}
+
+.sheet-logo-left, .sheet-logo-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 100%;
+}
+
+.sheet-logo-left {
+  border-right: 1.5px solid var(--border-sheet);
+}
+
+.sheet-logo-right {
+  border-left: 1.5px solid var(--border-sheet);
+}
+
+.sheet-header-logo {
+  height: 54px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sheet-logo-text {
+  font-size: 0.65rem;
+  font-weight: 800;
+  margin-top: 2px;
+  color: #000;
+}
+
+.sheet-main-title {
+  padding: 6px 10px;
+}
+
+.sheet-main-title h3 {
+  font-size: 0.88rem;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  color: #000;
+}
+
+.sheet-thesis-title {
+  font-size: 0.64rem;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 3px;
+  line-height: 1.25;
+}
+
+/* TABLAS COMPACTAS DE LA FICHA */
+.table-compact {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-sheet);
+  margin-bottom: 4px;
+}
+
+.table-compact th, .table-compact td {
+  border: 1px solid var(--border-sheet);
+  padding: 3px 6px;
+  font-size: 0.72rem;
+  text-align: left;
+}
+
+.table-compact th {
+  background-color: #f1f5f9;
+  text-align: center;
+  font-weight: 800;
+  color: #000;
+}
+
+.cell-label {
+  font-weight: 800;
+  background-color: #f8fafc;
+  white-space: nowrap;
+}
+
+.section-divider-title {
+  background: #e2e8f0;
+  border: 1.5px solid var(--border-sheet);
+  border-bottom: none;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.74rem;
+  padding: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.component-header-banner {
+  background: var(--unp-blue);
+  color: #ffffff;
+  border: 1.5px solid var(--border-sheet);
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.banner-tag { font-size: 0.73rem; font-weight: 700; }
+.banner-value { font-size: 0.86rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.3px; }
+.banner-ifc { font-size: 0.7rem; background: #0284c7; padding: 2px 7px; border-radius: 3px; font-family: monospace; font-weight: bold; }
+
+/* GRILLA MEDIA: PANEL FOTOGRÁFICO & COMENTARIOS */
+.sheet-middle-grid {
+  display: grid;
+  grid-template-columns: 56% 44%;
+  border: 1.5px solid var(--border-sheet);
+  margin-bottom: 4px;
+}
+
+.photo-panel-box {
+  border-right: 1.5px solid var(--border-sheet);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-box-title {
+  background: #f1f5f9;
+  border-bottom: 1px solid var(--border-sheet);
+  font-weight: 800;
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 3px;
+}
+
+.photo-container-drop {
+  min-height: 210px;
+  max-height: 245px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-sheet);
+}
+
+.photo-preview-img {
+  width: 100%;
+  height: 100%;
+  max-height: 245px;
+  object-fit: contain;
+}
+
+.photo-placeholder-content {
+  text-align: center;
+  color: #94a3b8;
+  padding: 20px;
+}
+
+.photo-placeholder-content i {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: var(--unp-blue);
+}
+
+.photo-placeholder-content p {
+  font-size: 0.72rem;
+}
+
+.photo-desc-row {
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  font-size: 0.72rem;
+  background: #fff;
+}
+
+.desc-tag { font-weight: 800; margin-right: 6px; white-space: nowrap; }
+
+.comments-panel-box {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.severity-ref-table td {
+  padding: 2px 4px;
+  font-size: 0.68rem;
+}
+
+.comments-textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  padding: 6px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  resize: vertical;
+  background: #fff;
+}
+
+/* INPUTS LIMPIOS EN LA FICHA */
+.clean-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.72rem;
+  font-family: inherit;
+  color: #000;
+  padding: 2px 3px;
+}
+
+.clean-input:focus {
+  outline: 1.5px solid var(--unp-blue);
+  background: #eff6ff;
+}
+
+.clean-num {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  text-align: center;
+  font-size: 0.72rem;
+  padding: 2px;
+}
+
+.clean-num:focus {
+  outline: 1.5px solid var(--unp-blue);
+  background: #eff6ff;
+}
+
+.highlight-cell {
+  background-color: #fef08a !important;
+  font-weight: 800;
+  text-align: center !important;
+}
+
+.calc-result {
+  text-align: center !important;
+  font-size: 0.82rem;
+}
+
+.sheet-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.66rem;
+  color: #475569;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* =========================================================
+   DASHBOARD KPI HERO
+   ========================================================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.kpi-card-hero {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.kpi-hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+.kpi-hero-header h3 {
+  font-size: 1.05rem;
+  color: var(--unp-blue);
+  font-weight: 800;
+}
+
+.badge-pill {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.kpi-hero-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 18px;
+}
+
+.kpi-score-circle {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 7px solid var(--scap-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.score-number {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.score-scale {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.intervention-box {
+  background: #f1f5f9;
+  border-left: 5px solid var(--fic-brick);
+  padding: 9px 14px;
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0 6px 6px 0;
+}
+
+.priority-scale-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.scale-item {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 5px solid;
+  font-size: 0.8rem;
+}
+
+.scale-item strong { display: inline-block; margin-left: 8px; }
+.scale-item p { font-size: 0.73rem; color: #475569; margin-top: 2px; }
+
+.scale-green { background: #f0fdf4; border-color: var(--scap-green); }
+.scale-blue { background: #eff6ff; border-color: var(--scap-blue); }
+.scale-yellow { background: #fffbeb; border-color: var(--scap-yellow); }
+.scale-red { background: #fef2f2; border-color: var(--scap-red); }
+.scale-darkred { background: #450a0a; color: #fff; border-color: #991b1b; }
+.scale-darkred p { color: #fca5a5; }
+
+.table-responsive { overflow-x: auto; }
+
+.table-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.table-data th, .table-data td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.table-data th {
+  background: #f8fafc;
+  color: #334155;
+  font-weight: 800;
+}
+
+/* =========================================================
+   BIM CARDS
+   ========================================================= */
+.bim-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.bim-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.bim-card h4 {
+  font-size: 1rem;
+  color: var(--unp-blue);
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.bim-check-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.bim-check-list li {
+  font-size: 0.82rem;
+  padding: 4px 0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.bim-check-list code {
+  background: #e2e8f0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--unp-blue);
+}
+
+.code-preview pre {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 0.74rem;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+}
+
+.workflow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.w-step {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.w-num {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: var(--unp-blue);
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 0.85rem;
+  line-height: 28px;
+  margin-bottom: 6px;
+}
+
+.w-step strong { display: block; font-size: 0.85rem; color: var(--unp-blue); }
+.w-step p { font-size: 0.74rem; color: var(--text-muted); margin-top: 4px; }
+.w-arrow { color: #94a3b8; font-size: 1.3rem; }
+
+/* =========================================================
+   ESTILOS DEL PLAN DE MANTENIMIENTO INTEGRAL (TAB 5)
+   ========================================================= */
+.plan-hero-card {
+  border-top: 4px solid var(--unp-blue);
+}
+
+.plan-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.budget-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.budget-kpi-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg-primary-soft {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.kpi-mini-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-big-number {
+  font-size: 1.65rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 4px 0;
+}
+
+.kpi-med-number {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--unp-blue);
+  line-height: 1.2;
+  margin: 4px 0;
+}
+
+.kpi-sub-text {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.filter-pills {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #e2e8f0;
+  color: var(--unp-blue);
+}
+
+.filter-btn.active {
+  background: var(--unp-blue);
+  border-color: var(--unp-blue);
+  color: #ffffff;
+}
+
+.table-budget tfoot tr td {
+  border-top: 2px solid #cbd5e1;
+  font-weight: bold;
+}
+
+.table-budget tr.highlight-total td {
+  background: #eff6ff;
+  color: var(--unp-blue);
+  font-size: 0.92rem;
+  font-weight: 900;
+  border-top: 2px solid var(--unp-blue);
+}
+
+/* CRONOGRAMA GRID */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.schedule-card {
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 5px solid;
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.schedule-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.schedule-card h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.schedule-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.schedule-card li {
+  font-size: 0.78rem;
+  color: #334155;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.schedule-card li i {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.schedule-rutinario { border-left-color: var(--scap-green); }
+.schedule-rutinario .schedule-badge { background: #dcfce7; color: #166534; }
+
+.schedule-preventivo { border-left-color: var(--unp-blue); }
+.schedule-preventivo .schedule-badge { background: #dbeafe; color: #1e40af; }
+
+.schedule-periodico { border-left-color: var(--scap-yellow); }
+.schedule-periodico .schedule-badge { background: #fef3c7; color: #92400e; }
+
+.schedule-correctivo { border-left-color: var(--scap-red); }
+.schedule-correctivo .schedule-badge { background: #fee2e2; color: #991b1b; }
+
+/* ESPECIFICACIONES TÉCNICAS ACCORDION */
+.specs-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spec-detail {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+.spec-detail summary {
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--unp-blue);
+  user-select: none;
+}
+
+.spec-content {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #cbd5e1;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.spec-content ol {
+  margin-left: 20px;
+  margin-top: 6px;
+}
+
+.spec-content li {
+  margin-bottom: 4px;
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  font-size: 0.88rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.hidden { display: none !important; }
+
+/* =========================================================
+   ESTILOS DE IMPRESIÓN (PDF OFICIAL A4)
+   ========================================================= */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .main-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tab-content {
+    display: none !important;
+  }
+
+  .tab-content.active {
+    display: block !important;
+  }
+
+  .official-sheet-wrapper {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .official-sheet {
+    max-width: 100% !important;
+    width: 100% !important;
+    border: 1.5px solid #000 !important;
+    box-shadow: none !important;
+    padding: 8px !important;
+    page-break-inside: avoid;
+  }
+
+  .sheet-header-logo {
+    height: 48px !important;
+  }
+
+  .clean-input, .clean-num, .comments-textarea {
+    border: none !important;
+    background: transparent !important;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 0.8cm;
+  }
+}
